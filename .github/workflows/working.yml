@@ -1,0 +1,26 @@
+name: Working README (expected pass)
+on: [push, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  readme:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: johncat88425-del/fresh-eyes@dfcac778f241dc598aea1fe2597d7a254d7154ee
+        id: fresh-eyes
+        with:
+          path: good
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: readme-good-report
+          path: ${{ steps.fresh-eyes.outputs.report }}
+          if-no-files-found: warn
+          retention-days: 14

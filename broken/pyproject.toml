@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shout-demo"
+version = "1.0.0"
+description = "Prints a text file in capitals. A tiny CLI for the Fresh Eyes README-check demo."
+requires-python = ">=3.9"
+
+[project.scripts]
+shout = "shout.cli:main"
+
+[tool.setuptools]
+packages = ["shout"]
