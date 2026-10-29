@@ -39,3 +39,10 @@ jobs:
 Your README needs one `pip install` command and one `--help` or `--version` command in code blocks.
 
 The Action is pinned to commit `dfcac778f241dc598aea1fe2597d7a254d7154ee`. Its reports distinguish startup checks from functional correctness. Open either badge, then its job summary for the actual commands, exit codes and environment. The report artifact expires after 14 days; the workflow history and summaries remain the primary demo links.
+
+
+## Fixed release
+
+The current working/broken workflows pin `johncat88425-del/fresh-eyes@v1.0.0`, using Node 24 actions. The runs dated 26 October remain historical records. The latest push creates a new expected green startup check and expected red missing-command failure; inspect their actual summaries. These are two team-written engineering fixtures, not AI repairs.
+
+The real-repository nightly monitor is separate: [Fresh Eyes nightly history](https://johncat88425-del.github.io/fresh-eyes/nightly.html?lang=en). This demonstration repository has no duplicate nightly workflow and uses no provider key or model.
